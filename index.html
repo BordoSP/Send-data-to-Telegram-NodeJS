@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+      <div class="main">
+      <h3>Форма</h3>
+      <p>Оставьте ваши контактные данные</p>
+       
+		<form id="application" name=" application ">
+			<input name="name" id="applicationName" maxlength="20" placeholder="Введите ваше имя" required />
+			<input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail" required/>
+			<input name="telephone" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон" required />
+			<button class="applicationButton" onclick="sendDataToServer()" form="application">Связаться со мной</button>
+		</form>
+	</div>
+<script src="script.js"></script>
+</body>
+</html>
