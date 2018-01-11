@@ -13,25 +13,8 @@ http.createServer(function(req, res) {
   file.serve(req, res);
     req.on('data', function (data) {
         var readyData = JSON.parse(data);
-        setTimeout(function() {
-            bot.sendMessage(id, "-----------------------");
-        }, 300);
-         setTimeout(function() {
-            bot.sendMessage(id, "Заказ № " + ++counter);
-        }, 600);
-        setTimeout(function() {
-            bot.sendMessage(id, "Имя: " + readyData.name);
-        }, 800);
-        setTimeout(function() {
-            bot.sendMessage(id, "Email: " + readyData.email);
-        }, 1000);
-        setTimeout(function() {
-            bot.sendMessage(id, "Телефон: " + readyData.telephone);
-        }, 1200);
-         setTimeout(function() {
-            bot.sendMessage(id, "-----------------------");
-        }, 1400);
-        
+        var string = "Заказ №" + ++counter + "\n" + "Имя: " + readyData.name + "\n" + "Email: " + readyData.email + "\n" + "Телефон: " + readyData.telephone;
+        bot.sendMessage(id, string); 
       } );
 }).listen(8080);
 
